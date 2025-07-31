@@ -5,7 +5,7 @@ const path = require('path');
 const booksDbPath = path.join(__dirname, "db", 'books.json');
 let booksDB = [];
 
-const PORT = 4000
+const PORT = 4000;
 const HOST_NAME = 'localhost';
 
 const requestHandler = function (req, res) {
@@ -31,7 +31,7 @@ const requestHandler = function (req, res) {
 
 //RETREIVE ALL BOOKS ==> GET /books
 const getAllBooks = function (req, res) {
-    fs.readFile(booksDbPath, "utf8", (err, books)=> {
+    fs.readFile(booksDbPath, "utf8", (err, books) => {
         if (err){
             console.log(err)
             res.writeHead(400)
